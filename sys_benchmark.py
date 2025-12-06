@@ -19,7 +19,12 @@ class sys_text_dataset(Dataset):
         print(len(text_list))
         self.transform = transform
         self.text_list = []
-        self.font = ImageFont.truetype("Arial.ttf", 32)
+        try:
+            self.font = ImageFont.truetype("Arial.ttf", 32)
+        except Exception:
+            # Fallback for systems without Arial
+            self.font = ImageFont.load_default()
+            print("Warning: Arial.ttf not found, using default font.")
         for t in text_list:
             if self.can_render_string(t):
                 self.text_list.append(t)
@@ -33,7 +38,7 @@ class sys_text_dataset(Dataset):
 
     def can_render_string(self, text):
         try:
-            size = self.font.getsize(text)
+            bbox = self.font.getbbox(text)
             return True
         except Exception as e:
             return False
@@ -46,7 +51,9 @@ class sys_text_dataset(Dataset):
         # Get the draw object
         draw = ImageDraw.Draw(img)
         # Calculate width and height of the text to be drawn
-        text_width, text_height = draw.textsize(text, self.font)
+        bbox = draw.textbbox((0, 0), text, font=self.font)
+        text_width = bbox[2] - bbox[0]
+        text_height = bbox[3] - bbox[1]
         # Calculate the x, y coordinates of the text
         x = img.width / 2 - text_width / 2
         y = img.height / 2 - text_height / 2

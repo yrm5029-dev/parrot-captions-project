@@ -1,0 +1,14 @@
+=== PROMPT TUNING REPORT ===
+Dataset: 1000 words (Split 50/50)
+
+--- Tuning Phase (Top 5) ---
+Prompt: 'Only the visual object {}' | Val Score: 0.2834
+Prompt: 'Can you see the {}?' | Val Score: 0.2908
+Prompt: 'A real world {}' | Val Score: 0.2960
+Prompt: 'The object is a {}' | Val Score: 0.3006
+Prompt: 'The visual appearance of a {}' | Val Score: 0.3122
+
+--- Test Phase ---
+Baseline ('A photo of {}'): 0.3553
+Best Tuned ('Only the visual object {}'): 0.2874
+Improvement: 19.11%

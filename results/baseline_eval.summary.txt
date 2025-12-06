@@ -1,0 +1,7 @@
+model,laion2b_s34b_b79k
+seed,42
+device,cpu
+template,A photo of {}
+aggregate_sync_score,0.35654424562474313
+std_dev,0.030148754994852027
+num_words,5459

@@ -1,0 +1,4 @@
+Standard Model (Contextless): 0.3503
+Standard Model (A photo of): 0.3191
+Improvement (Realistic): 0.2979
+Improvement (Visual): 0.3044
