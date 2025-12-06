@@ -78,7 +78,7 @@ Dataset: SysText (synthetic single-word evaluation)
 
 The complete replication code is included in this submission.
 
-**GitHub Repository**: [INSERT YOUR GITHUB LINK HERE]
+**GitHub Repository**: [https://github.com/yrm5029-dev/parrot-captions-project](https://github.com/yrm5029-dev/parrot-captions-project)
 
 ### Reproducibility
 - **Seeds**: All scripts use `seed=42` for deterministic results.
