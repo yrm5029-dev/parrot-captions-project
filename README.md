@@ -17,7 +17,7 @@ This repository contains the replication and improvement code for the Course Pro
    ```
    (Note: You need `torch` and `torchvision` tailored to your system, e.g., CPU or CUDA).
 
-# How to verify in 15 minutes (Grader Friendly)
+# How to verify in 15 minutes
 
 1.  **Install**:
     ```bash
